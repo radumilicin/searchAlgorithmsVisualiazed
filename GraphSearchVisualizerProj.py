@@ -177,7 +177,9 @@ while running:
    screen.fill(WHITE)  # Clear the screen
    pygame.draw.rect(screen, GREEN, startRect)
    pygame.draw.rect(screen, RED, endRect)
+   
    drawGrid(GRAY)
+   
    pygame.display.update()
    obstacles = drawObstacles(screen_dims=SCREEN, block_width=BLOCKSIZE, block_height=BLOCKSIZE, surface=screen, start=start, end=end, alpha=0.3)      # draw obstacles with some probability
    pygame.display.update()
@@ -188,8 +190,10 @@ while running:
    
    if method == "DFS":
       dfs(start_pos, end_pos, obstacles)
+      
    elif method == "BFS":
       bfs(start_pos, end_pos, obstacles)
+      
    elif method == "Astar":
       matrixPoints = initializePointDistances(end_pos, SCREEN[0] // BLOCKSIZE, SCREEN[1] // BLOCKSIZE)
       Astar(start_pos, end_pos, matrixPoints, obstacles)

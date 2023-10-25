@@ -1,0 +1,4 @@
+"python.linting.pylintArgs": [
+    "--extension-pkg-whitelist=extensionname" // comma separated
+    "--unsafe-load-any-extension=y"
+]

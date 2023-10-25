@@ -62,9 +62,11 @@ class PQueue:
 
     def dequeue(self):
         first = self.queue[0]
+        
         self.queue[0], self.queue[-1] = self.queue[-1], self.queue[0]
         self.queue.pop(-1)
         self.percolateDown()
+        
         return first
 
                 

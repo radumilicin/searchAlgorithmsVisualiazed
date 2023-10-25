@@ -43,8 +43,7 @@ def initializePointDistances(end: Point, width : int, height : int) -> List[List
         for i in range(0, width):
                 for j in range(0, height):
                         matrixPoints[i][j] = PointAstar(Point(i,j), dist_pythagoras(Point(i,j), end))
-                        
-                        
+                                        
         return matrixPoints 
 
                         
